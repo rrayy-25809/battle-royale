@@ -4,7 +4,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.rrayy.BR.FightMode.FightMode;
 
-
 public class BR extends JavaPlugin {
     private FightMode FightMode;
 

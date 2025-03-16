@@ -1,7 +1,6 @@
 package com.rrayy.BR.FightMode;
 
 import org.bukkit.GameMode;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -9,12 +8,6 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-
-import net.md_5.bungee.api.ChatColor;
 
 public class FightEventHandler implements Listener {
     private FightMode fightMod;
@@ -51,14 +44,14 @@ public class FightEventHandler implements Listener {
             event.setKeepInventory(false);
             player.setGameMode(GameMode.SPECTATOR);
         } else {
-            PlayerInventory inventory = player.getInventory();
-            ItemStack originalItem = inventory.getItemInMainHand();
-            inventory.setItemInMainHand(new ItemStack(Material.TOTEM_OF_UNDYING)); //불사의 토템 효과 주기
-            event.setKeepInventory(true);
+            // PlayerInventory inventory = player.getInventory();
+            // ItemStack originalItem = inventory.getItemInMainHand();
+            // inventory.setItemInMainHand(new ItemStack(Material.TOTEM_OF_UNDYING)); //불사의 토템 효과 주기
+            // event.setKeepInventory(true);
 
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 1200, 10)); // 1분간 움직이지 못하게 함
-            player.sendMessage(ChatColor.RED + "당신은 사망하여 1분간 움직일 수 없습니다.");
-            inventory.setItemInOffHand(originalItem);
+            // player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 1200, 10)); // 1분간 움직이지 못하게 함
+            // player.sendMessage(ChatColor.RED + "당신은 사망하여 1분간 움직일 수 없습니다.");
+            // inventory.setItemInOffHand(originalItem);
         }
     }
 }

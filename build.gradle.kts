@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "com.rrayy"
-version = "1.0"
+version = "1.1"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT") // Spigot API
+    compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT") // Spigot API
 }
 
 tasks.withType<JavaCompile>().configureEach {
