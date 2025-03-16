@@ -1,0 +1,6 @@
+name: battle_royal
+version: 1.0
+main: com.rrayy.BR.BR
+api-version: '1.21'
+author: rrayy
+description: 서로 싸워라
