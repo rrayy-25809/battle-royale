@@ -36,7 +36,7 @@ public class tracking implements Listener {
                 closestPlayer.sendMessage(player.getName() + "님이 다이아몬드를 클릭했습니다!");
 
                 Vector direction = closestPlayer.getLocation().toVector().subtract(player.getLocation().toVector()).normalize();
-                closestPlayer.getWorld().spawnParticle(Particle.HAPPY_VILLAGER, closestPlayer.getLocation(), 10, direction.getX(), direction.getY(), direction.getZ(), 0.1);
+                player.getWorld().spawnParticle(Particle.HAPPY_VILLAGER, player.getLocation(), 10, direction.getX(), direction.getY(), direction.getZ(), 0.1);
                 player.playSound(player.getLocation(), Sound.BLOCK_NOTE_BLOCK_BIT, 1000.0F, 1.0F);
             } else {
                 player.sendMessage("주변에 다른 플레이어가 없습니다.");
